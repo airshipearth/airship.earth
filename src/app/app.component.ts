@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'app';
+  private email: string;
+
+  onSubmit() {
+    console.log(`Signup for: ${this.email}`);
+    delete this.email;
+  }
 }

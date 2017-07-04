@@ -4,26 +4,25 @@
   </div>
 
   <header id="header">
-    <h1>Eventually</h1>
-    <p>A simple template for telling the world when you'll launch<br />
-    your next big thing. Brought to you by <a href="http://html5up.net">HTML5 UP</a>.</p>
+    <h1>Airship Earth</h1>
+    <p>Global transportation the Earth is designed for.</p>
   </header>
 
-  <form id="signup-form" method="post" action="#">
-    <input type="email" name="email" id="email" placeholder="Email Address" />
-    <input type="submit" value="Sign Up" />
+  <form id="signup-form" #signupForm="ngForm" (ngSubmit)="onSubmit()">
+    <input type="email" [(ngModel)]="email" name="email" id="email" placeholder="Email Address" required />
+    <input type="submit" value="Learn more" />
   </form>
 
   <footer id="footer">
     <ul class="icons">
-      <li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-      <li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-      <li><a href="#" class="icon fa-github"><span class="label">GitHub</span></a></li>
-      <li><a href="#" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+      <li><a href="https://twitter.com/airshipearth" class="icon fa-twitter" target="_blank"><span class="label">Twitter</span></a></li>
+      <li><a href="https://facebook.com/airshipearth" class="icon fa-facebook" target="_blank"><span class="label">Email</span></a></li>
+      <!--<li><a href="#" class="icon fa-instagram" target="_blank"><span class="label">Instagram</span></a></li>-->
+      <!--<li><a href="#" class="icon fa-github" target="_blank"><span class="label">GitHub</span></a></li>-->
+      <!--<li><a href="mailto:someone@example.com?Subject=Hello%20again"" class="icon fa-envelope-o" target="_blank"><span class="label">Email</span></a></li>-->
     </ul>
     <ul class="copyright">
-      <li>&copy; Untitled.</li><li>Credits: <a href="http://html5up.net">HTML5 UP</a></li>
+      <li>&copy; Airship.Earth</li><li>Credits: <a href="http://html5up.net">HTML5 UP</a></li>
     </ul>
   </footer>
 </div>
-<!--<script src="assets/js/main.js"></script>-->
