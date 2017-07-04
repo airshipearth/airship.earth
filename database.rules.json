@@ -1,0 +1,8 @@
+{
+  "rules": {
+    "subscriptions": {
+      ".read": false,
+      ".write": true
+    }
+  }
+}

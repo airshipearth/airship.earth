@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {AngularFireDatabase, FirebaseListObservable} from 'angularfire2/database';
 
 @Component({
   selector: 'app-root',
@@ -8,8 +9,14 @@ import { Component } from '@angular/core';
 export class AppComponent {
   private email: string;
 
+  constructor(private db: AngularFireDatabase) { }
+
   onSubmit() {
-    console.log(`Signup for: ${this.email}`);
-    delete this.email;
+    this.db.list('/subscriptions').push({
+      date: (new Date()).toISOString(),
+      email: this.email,
+    }).then((result) => {
+      delete this.email;
+    }, (error) => {});
   }
 }
