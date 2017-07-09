@@ -4,7 +4,10 @@
   "license": "MIT",
   "scripts": {
     "build": "ng build",
+    "build:prod": "npm run build -- --env=prod",
     "e2e": "ng e2e",
+    "deploy": "firebase deploy",
+    "predeploy": "npm run build:prod",
     "install:clean": "npm install",
     "lint": "ng lint",
     "ng": "ng",
@@ -39,7 +42,6 @@
     "@types/jasminewd2": "~2.0.2",
     "@types/node": "~6.0.60",
     "codelyzer": "~3.0.1",
-    "firebase-tools": "^3.9.1",
     "jasmine-core": "~2.6.2",
     "jasmine-spec-reporter": "~4.1.0",
     "karma": "~1.7.0",
